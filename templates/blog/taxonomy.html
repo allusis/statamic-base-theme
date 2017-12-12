@@ -1,0 +1,23 @@
+<header>
+  <div class="content-wrap">
+    <h1>{{ title }}</h1>
+    <h2>{{ content }}</h2>
+  </div><!-- /.content-wrap -->
+</header>
+
+<article class="list">
+  <div class="content-wrap">
+    {{ collection:blog taxonomy="true" paginate="true" as="posts" limit="10" }}
+      {{ if no_results }}
+        <p>No "{{ title }}" posts.</p>
+      {{ /if }}
+
+      {{ posts scope="tag" }}
+        {{ partial:block }}
+      {{ /posts }}
+
+      {{ partial:pagination }}
+    {{ /collection:blog }}
+  </div>
+</article>
+

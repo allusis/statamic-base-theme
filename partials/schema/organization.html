@@ -1,0 +1,41 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "{{ organization_name }}",
+    "legalName" : "{{ legal_name }}",
+    "url": "{{ site_url remove_right="/" }}",
+    "logo": "{{ site_url remove_right="/" }}{{ branding_settings }}{{ asset:social_logo }}{{ url }}{{ /asset:social_logo }}{{ /branding_settings }}",
+    "foundingDate": "{{ founding_year }}",
+    "founders":[
+      {{{ founders }}
+        "@type": "Person",
+        "name": "{{ founder_name }}"
+      }{{ if last }}{{ else }},{{{ /if }}
+      {{ /founders }}
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ contact_settings:address }}",
+      "addressLocality": "{{ contact_settings:city }}",
+      "addressRegion": "{{ contact_settings:state }}",
+      "postalCode": "{{ contact_settings:zip }}",
+      "addressCountry": "{{ contact_settings:country }}"
+    },
+    {{ contacts }}
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "{{ contact_role }}",
+      "telephone": "[+1 {{ contact_phone }}]",
+      "email": "{{ contact_email }}"
+    },
+    {{ /contacts }}
+    {{ social_settings }}
+    "sameAs": [
+      {{ social_sites }}
+      "{{ network_url }}"{{ if !last }},{{ /if }}
+      {{ /social_sites }}
+    ]
+    {{ /social_settings }}
+  }
+</script>

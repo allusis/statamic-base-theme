@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="collapse" viewBox="0 0 24 24">
+      <g  transform="translate(0, 0)">
+        <line data-cap="butt" fill="none" stroke-width="2" stroke-miterlimit="10" x1="12" y1="4" x2="12" y2="20" stroke-linejoin="miter" stroke-linecap="butt"/>
+        <polyline fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="16,16 12,20 8,16 " stroke-linejoin="miter"/>
+        <polyline fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="8,8 12,4 16,8 " stroke-linejoin="miter"/>
+        <line data-color="color-2" fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="21" y1="1" x2="3" y2="1" stroke-linejoin="miter"/>
+        <line data-color="color-2" fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="21" y1="23" x2="3" y2="23" stroke-linejoin="miter"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>

@@ -1,0 +1,22 @@
+{{ partial:post-header }}
+
+<article class="content">
+  <div class="content-wrap">
+    {{ long_form }}
+      {{ if type == "content" }}
+        {{ content | markdown }}
+      {{ elseif type == "image" }}
+        <p>
+          <img src="{{ photo }}" class="{{ size | lower }} {{ if caption }}captioned{{ /if }}" alt="{{ caption }}">
+        </p>
+      {{ elseif type == "quote" }}
+        <blockquote>
+          {{ quote | markdown }}
+          {{ if cite }}<cite>&mdash; {{ cite}}</cite>{{ /if }}
+        </blockquote>
+      {{ /if }}
+    {{ /long_form }}
+  </div>
+</article>
+
+{{ partial:article-footer }}

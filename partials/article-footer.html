@@ -1,0 +1,8 @@
+<footer class="list article-footer">
+  <div class="content-wrap">
+    <h6>Next Post</h6>
+    {{ collection:next in="blog" limit="2" scope="tag" url:not="{url}"}}
+      {{ partial:block }}
+    {{ /collection:next }}
+  </div>
+</footer>

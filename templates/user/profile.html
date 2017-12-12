@@ -1,0 +1,9 @@
+{{ user:profile username="{username}" }}
+  <header>
+    <div class="content-wrap">
+      <h1>{{ name or username }}</h1>
+      <h2>{{ email }}</h2>
+      <img src="{{ email | gravatar:200 }}" alt="{{ name }}" class="img-circle" />
+    </div><!-- /.content-wrap -->
+  </header>
+{{ /user:profile }}

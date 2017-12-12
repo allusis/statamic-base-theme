@@ -1,0 +1,19 @@
+{{ partial:post-header }}
+
+<article class="content">
+  <div class="content-wrap">
+    {{ if intro_image }}
+      <p><img src="{{ intro_image }}" class="intro-image"></p>
+    {{ /if }}
+
+    {{ content }}
+
+    <ul class="tags">
+    {{ tags }}
+      <li><a href="{{ url }}">{{ title }}</a></li>
+    {{ /tags }}
+    </ul>
+  </div>
+</article>
+
+{{ partial:article-footer }}

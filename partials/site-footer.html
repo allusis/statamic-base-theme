@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  {{ globals_social }}
+    <div class="title">{{ social_title }}</div>
+    <div class="socialLinks">
+      {{ social_sites }}
+        <a class="socialLink" href="{{ network_url }}" target="_blank" rel="noopener">
+          <svg class="icon fill" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xlink:href="{{ theme:img src="sprites/social.svg#{{ image_id }}"}}"></use>
+          </svg>
+          <span class="sr-only">{{ name }}</span>
+        </a>
+      {{ /social_sites }}
+    </div>
+  {{ /globals_social }}
+</footer>

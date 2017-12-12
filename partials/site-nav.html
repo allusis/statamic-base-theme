@@ -1,0 +1,24 @@
+<div class="site-header">
+  <div class="content-wrap">
+    <a class="site-logo" href="/" title="Home">
+      <img src="{{ theme:img src="logo.svg" }}" alt="{{ globals_site_info:site_name }}">
+    </a>
+    <nav class="site-nav">
+      <div class="content-wrap end-sm middle-sm">
+        {{ nav from="/"  scope="tag" }}
+          <span class="nav-item">
+            <a class="nav-link{{ if is_current or is_parent }} active{{ /if }}" href="{{ url }}">{{ tag:nav_title or title }}</a>
+          </span>
+        {{ /nav }}
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- <div class="site-search">
+  <form class="content-wrap" role="search" action="{{ link to='search' }}">
+    <div class="form-group">
+      <input type="text" class="form-control search" name="q" placeholder="Search">
+    </div>
+  </form>
+</div> -->
